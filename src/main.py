@@ -12,7 +12,7 @@ y = np.arange(-fov_size/2,fov_size/2,fov_step)
 start_t = 0
 dt = 0.1 # us , simulation time is 100 ns
 
-sample_nos = 10         # Number of single molecule runs to be simulated
+sample_nos = 1000         # Number of single molecule runs to be simulated
 
 lamda = 750                 # wavelength, in nm
 fwhm = 360                  # FWHM of the beam in nm
@@ -120,7 +120,7 @@ for change_fluorophore in ['DL755Ab','AF647Ab']:
                             photons_all_sample.append(photons_all)
                             #pop_all_sample.append(pop_all)
                             #INCLUDE THE NEXT LINE IF you want to plot individual dynamics, similar to Figure 2 in main text
-                            p_f.plot_figures(psf_all,K,L_list,fov_size,beam_all,dye_pos,beam_dwell_time,k01_all,pop_all,photons_all,est_all,dt)
+                            #p_f.plot_figures(psf_all,K,L_list,fov_size,beam_all,dye_pos,beam_dwell_time,k01_all,pop_all,photons_all,est_all,dt)
                     #print(np.array(dye_pos_sample))
                     #print(np.array(est_pos_sample))
                     #print(np.array(photons_all_sample))
